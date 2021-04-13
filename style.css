@@ -39,12 +39,13 @@ a:hover {
 #logo {
   font-family: "Spectral+SC";
   font-size: 1.7rem;
-  padding: 2rem;
+  padding: 2rem 0 0 2rem;
 }
 
 #header{
-  /* margin-top: 2.5rem; */
+  position: relative;
   text-align: center; 
+  z-index: 1;
 }
 
 #mainCard{
@@ -52,7 +53,7 @@ a:hover {
 }
 
 #editionContainer {
-  margin-top: 50vh;
+  margin-top: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
