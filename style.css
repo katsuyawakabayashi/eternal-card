@@ -87,12 +87,14 @@ video {
   justify-content: left;
   justify-content: space-between;
 }
-
+/* 
 #footerContainer a {
   color:white;
-}
+  font-weight: 300;
+} */
 
-#footerContainer p {
+#footerContainer p, #footerContainer a {
   color:#5A5A5A;
+  font-weight: 400;
 }
 
