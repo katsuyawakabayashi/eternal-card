@@ -50,30 +50,11 @@ a:hover {
     text-decoration: #FFF;
 }
   
-
-/* Card Video */
-.videoContainer {
-  width: 100%;
-}
-video {
-  width: 100%;
-  height: 100vh;
-}
-
-
-
 /* header */
 #header {
   margin-top: 8rem;
   text-align: center; 
 }
-
-/* body */ 
-
-/* .text-container {
-  margin-top: 5rem;
-  margin-left: 20rem;
-} */
 
 .text-container {
     margin: 0 auto;
@@ -84,14 +65,14 @@ video {
 .text-container p{
   text-align: left; 
   font-family: 'Scheherazade', sans-serif;
-  font-size: 2.3rem;
+  font-size: 1.75rem;
 }
 
 
 /* Footer */
 #footerContainer {
   padding: 0 0 0 2rem;
-  margin-top: 24vh;
+  margin-top: 35vh;
   width: 30%;
   display: flex;
   flex-direction: row;
