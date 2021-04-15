@@ -57,39 +57,36 @@ video {
 
 
 
-/* Card Header */
-#title {
-  margin-top: 1rem;
+/* header */
+#header {
+  margin-top: 8rem;
   text-align: center; 
 }
 
+/* body */ 
 
+/* .text-container {
+  margin-top: 5rem;
+  margin-left: 20rem;
+} */
 
-/* Edition */
-#editionContainer {
-  margin-top: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
+.text-container {
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 50%;
 }
 
-.edition {
-  font-size: 2rem;
-  color: white;
-  letter-spacing: 0.5rem;
-  display: block;
-}
-
-.btnContainer {
-  margin-top: 2rem;
+.text-container p{
+  text-align: left; 
+  font-family: 'Scheherazade', sans-serif;
+  font-size: 2.3rem;
 }
 
 
 /* Footer */
 #footerContainer {
   padding: 0 0 0 2rem;
-  margin-top: 50vh;
+  margin-top: 24vh;
   width: 30%;
   display: flex;
   flex-direction: row;
