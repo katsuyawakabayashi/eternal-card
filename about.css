@@ -46,6 +46,11 @@ a:hover {
   letter-spacing: 0.25rem;
 }
 
+#logo a:hover{
+    text-decoration: #FFF;
+}
+  
+
 /* Card Video */
 .videoContainer {
   width: 100%;
