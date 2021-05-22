@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Eternal Card is a non-depreciable, blockchain powered asset. Our mission is to standardize the world’s digital assets through the power of NFTs.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Eternal Card is a non-depreciable, blockchain powered asset. Our mission is to standardize the world’s digital assets through the power of NFTs."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETERNAL CARD</title>
-    <link rel="icon" type="ico" href="icon.ico">
-    <link rel="stylesheet" href="/Home/index.css">
-</head>
-<body>
-    <div id="logo"><a href="index.html">ETERNAL CARD</a></div>
-    <!-- Card -->
+    <link rel="icon" type="ico" href="icon.ico" />
+    <link rel="stylesheet" href="/Home/index.css" />
+  </head>
+  <body>
     <div id="mainCard">
-        <div class="videoContainer">
-            <video loop autoplay muted src="card.mp4"></video>
-        </div>   
+      <div class="videoContainer">
+        <video loop autoplay muted src="card.mp4"></video>
+      </div>
     </div>
-    <!-- Header -->
-    <div id="title"><h1>THE  ETERNAL  ASSET</h1></div>
+    <!-- Title -->
+    <div id="title"><h1>THE ETERNAL ASSET</h1></div>
     <!-- Editon -->
     <div id="editionContainer">
-        <h2 class="edition">EDITION ORIGIN</h2>
-        <div class="btnContainer">
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Purchase</a>
-            <p>Test</p>
-        </div>
+      <h2 class="edition">EDITION ORIGIN</h2>
+      <div class="btnContainer">
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Purchase</a>
+      </div>
     </div>
     <!-- Footer -->
     <footer>
-        <div id="footerContainer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> ETERNAL CARD</p>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
+      <div id="footerContainer">
+        <p id="footer">
+          <script>
+            document.getElementById("footer").innerHTML =
+              "&copy; " + new Date().getFullYear() + " ETERNAL CARD";
+          </script>
+        </p>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
-    <!-- Script -->
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
