@@ -18,8 +18,8 @@ body {
 h1,h2 {
   margin: 0;
   color: #5A5A5A;
-  letter-spacing: 01rem;
-  font-weight: 400; 
+  letter-spacing: 0.5rem;
+  font-weight: 500; 
 }
 
 h1 {
@@ -45,6 +45,7 @@ a:hover {
   max-height: 25vh;
   padding: 2rem 0 0 2rem;
   letter-spacing: 0.25rem;
+  display: none;
 }
 
 #logo a:hover{
