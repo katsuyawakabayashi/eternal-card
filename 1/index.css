@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
 
-html {
+html,body {
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
@@ -45,6 +45,7 @@ a:hover {
 .videoContainer {
   width: 100%;
 }
+
 video {
   width: 100%;
   height: 100vh;
@@ -61,7 +62,9 @@ video {
     position: absolute;
     right: 60px;
     bottom: 40px;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: "Scheherazade";
+    line-height: 1.5rem;
 }
 
 #ownedBy {
@@ -86,7 +89,6 @@ video {
     font-size: 1.5rem;
 }
 
-
 #ownerContainer {
     font-size: 2.5rem;
     color: #9C8853;
@@ -94,16 +96,69 @@ video {
 
 /* Footer */
 #footerContainer {
-  margin: 0 0 0 2rem;
-  margin-top: 0vh;
-  width: 40%;
+  margin-left: 2rem;
+  margin-top: 0;
+  width: 75%;
+  max-width: 375px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 #footerContainer p, #footerContainer a {
+  font-size: 1rem;
   color:#5A5A5A;
   font-weight: 400;
 }
 
+/* Media Queries */
+@media (max-width: 750px) {
+  video {
+    transform: scale(1.5);
+  }
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  video {
+    transform: scale(2);
+  }
+} 
+
+@media (max-width: 400px) {
+  #footerContainer {
+      margin-left: 1rem;
+      width: 90%
+  }
+  #rightContainer{
+    /* top: 3rem;
+    right: 3rem; */
+    right: 46%;
+    bottom: 18%;
+    
+    font-size: 3rem;
+    
+  }
+  #leftContainer {
+    font-size: 1rem;
+    margin-top: 0 auto;
+    left: 25%;
+    text-align: center;
+  }
+  /* #leftContainer:before {
+      content:"#1";
+      font-size: 3rem;
+      padding-top: 50px;
+  } */
+  #ownerContainer {
+    font-size: 1.5rem;
+    
+  }
+}

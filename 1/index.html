@@ -20,19 +20,23 @@
     </div>
     <div id="leftContainer">
         <p id="ownedBy">Owned by</p>
-        <a id="ownerContainer" href="https://twitter.com/twitter">@ETERNALCARD</a>
+        <a id="ownerContainer" href="https://twitter.com/eternal_card">@ETERNALCARD</a>
     </div>
     <div id="rightContainer">
-        <p>#1</p>
+        <p>#42</p>
     </div>
     <!-- Footer -->
     <footer>
         <div id="footerContainer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> ETERNAL CARD</p>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+          <p id="footer">
+            <script>
+              document.getElementById("footer").innerHTML =
+                "&copy; " + new Date().getFullYear() + " ETERNAL CARD";
+            </script>
+          </p>
+          <a href="eternal-card.com/about">About</a>
+          <a href="eternal-card.com/contact">Contact</a>
         </div>
-    </footer>
-    <!-- Script -->
+      </footer>
 </body>
 </html>
