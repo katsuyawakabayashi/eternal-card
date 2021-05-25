@@ -23,7 +23,7 @@ h1,h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 a {
@@ -71,24 +71,11 @@ video {
 /* body */ 
 
 .text-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 5em;
-    gap: 17em;
-}
-
-.editions-container p{
-  text-align: left; 
-  font-family: 'Scheherazade', sans-serif;
-  font-size: 2.3rem;
-}
-
-
-.dates-container p{
-    text-align: left; 
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    text-align: center; 
     font-family: 'Scheherazade', sans-serif;
-    font-size: 2.3rem;
-  }
+}
 
 
 .grey-text{
@@ -117,3 +104,37 @@ video {
   font-weight: 400;
 }
 
+
+.bottomText {
+  margin-top: 10rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.bottomText a{
+  color: #5A5A5A;
+}
+
+@media (min-width: 750px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
+  }
+}
+
+
+@media (min-width: 400px) {
+  
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+}
