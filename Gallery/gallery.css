@@ -64,13 +64,24 @@ a:hover {
 
 .card-container {
   font-size: 1.5rem;
-  margin-top: 7rem;
+  margin-top: 6rem;
 }
 
 .card-container a{
   color: #9C8853;
 }
 
+.bottomText {
+  
+  margin-top: 10rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.bottomText a{
+  color: #5A5A5A;
+}
 
 /* Footer */
 #footerContainer {
@@ -88,3 +99,31 @@ a:hover {
   font-weight: 400;
 }
 
+
+
+
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
+}
+
+  
+}
+
+
+@media (max-width: 400px) {
+  
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+}
