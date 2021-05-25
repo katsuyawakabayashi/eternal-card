@@ -20,12 +20,15 @@
     <!-- Footer -->
     <footer>
         <div id="footerContainer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> ETERNAL CARD</p>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+          <p id="footer">
+            <script>
+              document.getElementById("footer").innerHTML =
+                "&copy; " + new Date().getFullYear() + " ETERNAL CARD";
+            </script>
+          </p>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </footer>
-    <!-- Script -->
-    <script src="script.js"></script>
+      </footer>
 </body>
 </html>

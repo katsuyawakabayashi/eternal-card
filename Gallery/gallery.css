@@ -16,14 +16,15 @@ body {
 }
 
 h1,h2 {
-  margin: 0;
   color: #5A5A5A;
-  letter-spacing: 01rem;
+  letter-spacing: 1rem;
   font-weight: 400; 
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1rem;
+  margin-top: 4rem;
+  text-align: center;
 }
 
 a {
@@ -51,38 +52,36 @@ a:hover {
   }
   
 
-
-
-/* header */
-#header {
-  margin-top: 8rem;
-  text-align: center; 
-}
-
-
-.card-container {
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:center;
-  flex-basis: 33%;
-  margin-top: 20vh;
+  justify-content:space-around;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-family: "Scheherazade";
 }
 
-.card-container > * {
-  padding: 0;
-  flex: 0 1 250px;
- 
+.card-container {
+  font-size: 1.5rem;
+  margin-top: 6rem;
 }
 
-.card-container img {
-
-  width: 100%;
-  max-width: 250px;
+.card-container a{
+  color: #9C8853;
 }
 
+.bottomText {
+  
+  margin-top: 10rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
 
-
+.bottomText a{
+  color: #5A5A5A;
+}
 
 /* Footer */
 #footerContainer {
@@ -100,3 +99,31 @@ a:hover {
   font-weight: 400;
 }
 
+
+
+
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
+}
+
+  
+}
+
+
+@media (max-width: 400px) {
+  
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+}
