@@ -104,13 +104,13 @@ a:hover {
     font-size: 2rem;
     text-align: center;
   }
-  #footerContainer {
+  /* #footerContainer {
     margin-left: 0.5rem;
     width: 70%;
   }
   #footerContainer p, #footerContainer a {
     font-size: 0.75rem;
-  }
+  } */
 }
 
 @media (max-width: 750px) {
