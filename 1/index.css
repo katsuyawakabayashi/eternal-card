@@ -103,7 +103,6 @@ video {
 /* Footer */
 #footerContainer {
   margin-left: 2rem;
-  margin-top: 50vh;
   width: 75%;
   max-width: 375px;
   display: flex;
