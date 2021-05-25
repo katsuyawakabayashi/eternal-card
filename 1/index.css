@@ -59,7 +59,7 @@ video {
 #leftContainer {
   font-size: 1.5rem;
   position: absolute;
-  bottom: 3rem;
+  bottom: 4.5rem;
   left: 3rem;
 }
 
@@ -103,6 +103,7 @@ video {
 /* Footer */
 #footerContainer {
   margin-left: 2rem;
+  margin-bottom: 1rem;
   width: 75%;
   max-width: 375px;
   display: flex;
