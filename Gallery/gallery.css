@@ -32,7 +32,6 @@ a {
   color: #fff;
   outline: none;
   text-decoration: none;
-  margin: 1rem;
 }
 
 a:hover {
@@ -72,7 +71,7 @@ a:hover {
 /* Footer */
 #footerContainer {
   margin-left: 2rem;
-  margin-top: 50vh;
+  margin-top: 20vh;
   width: 75%;
   max-width: 375px;
   display: flex;
@@ -92,19 +91,21 @@ a:hover {
     font-size: 2rem;
     text-align: center;
   }
-  #footerContainer {
-    margin-left: 1rem;
-    width: 90%;
-  }
-}
+} 
 
-@media (min-width: 400px) {
+@media (max-width: 750px) {
   #footerContainer {
     margin-left: 0.5rem;
     width: 70%;
   }
-  #footerContainer p,
-  #footerContainer a {
+  #footerContainer p, #footerContainer a {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
   }
 }

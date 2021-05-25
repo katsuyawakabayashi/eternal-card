@@ -136,11 +136,8 @@ video {
     justify-content: center;
     align-items: center; 
   }
-} 
-
-@media (max-width: 400px) {
   #footerContainer {
-      margin-left: 1rem;
-      width: 90%
-  }
+    margin-left: 1rem;
+    width: 90%
 }
+} 

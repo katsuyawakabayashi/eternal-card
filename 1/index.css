@@ -102,8 +102,8 @@ video {
 
 /* Footer */
 #footerContainer {
-  margin-left: 3rem;
-  margin-bottom: 0;
+  margin-left: 2rem;
+  margin-top: 50vh;
   width: 75%;
   max-width: 375px;
   display: flex;
@@ -112,10 +112,9 @@ video {
   justify-content: space-between;
 }
 
-#footerContainer p,
-#footerContainer a {
+#footerContainer p, #footerContainer a {
   font-size: 1rem;
-  color: #5a5a5a;
+  color:#5A5A5A;
   font-weight: 400;
 }
 
