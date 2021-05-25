@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <div id="logo"><a href="index.html">ETERNAL CARD</a></div>
     <!-- Header -->
     <div id="header"><h1>ABOUT</h1></div>
     <div class="text-container">
@@ -17,15 +16,22 @@
         <p>Our mission is to standardize the world’s digital assets.</p>
         <p>In blockchain, we trust.</p>
     </div>
-    <!-- Footer -->
-    <footer>
-        <div id="footerContainer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> ETERNAL CARD</p>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </footer>
-    <!-- Scrip -->
-    <script src="script.js"></script>
+    <div class="bottomText"><a href="https://eternal-card.com">Go back to main page</a></div>
+   <!-- Footer -->
+   <footer>
+    <div id="footerContainer">
+      <a href="https://eternal-card.com">
+        <p id="footer">
+          <script>
+            document.getElementById("footer").innerHTML =
+              "&copy; " + new Date().getFullYear() + " ETERNAL CARD";
+          </script>
+        </p>
+      </a>
+      <a href="https://eternal-card.com/"></a>
+      <a href="https://eternal-card.com/about">About</a>
+      <a href="https://eternal-card.com/contact">Contact</a>
+    </div>
+  </footer>
 </body>
 </html>

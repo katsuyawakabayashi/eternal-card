@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral+SC:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap");
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  color: #5a5a5a;
+  letter-spacing: 1rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-family: "Scheherazade";
+}
+
+.card-container {
+  font-size: 1.5rem;
+  margin-top: 6rem;
+}
+
+.card-container a {
+  color: #9c8853;
+}
+
+.bottomText {
+  margin-top: 10rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.bottomText a {
+  color: #5a5a5a;
+}
+
+/* Footer */
+#footerContainer {
+  margin-left: 2rem;
+  margin-top: 20vh;
+  width: 75%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footerContainer p, #footerContainer a {
+  font-size: 1rem;
+  color:#5A5A5A;
+  font-weight: 400;
+}
+
+@media (min-width: 750px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+} 
+
+@media (max-width: 750px) {
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
+  }
+}

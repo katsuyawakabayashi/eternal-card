@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
 
-html {
+html, body{
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
@@ -19,7 +19,7 @@ h1,h2 {
   margin: 0;
   color: #5A5A5A;
   letter-spacing: 0.5rem;
-  font-weight: 500; 
+  font-weight: 700; 
 }
 
 h1 {
@@ -27,51 +27,29 @@ h1 {
 }
 
 a {
-  color: #FFF;
   outline: none;
   text-decoration: none;
-  margin: 1rem;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-
-/* Nav */
-#logo {
-  font-family: "Spectral+SC";
-  font-size: 1.7rem;
-  max-height: 25vh;
-  padding: 2rem 0 0 2rem;
-  letter-spacing: 0.25rem;
-  display: none;
-}
-
-#logo a:hover{
-  text-decoration: #FFF;
-}
-
-
 /* Card Video */
 .videoContainer {
   width: 100%;
 }
+
 video {
   width: 100%;
   height: 100vh;
 }
 
-
-
-/* Card Header */
+/* Card Title */
 #title {
   margin-top: 1rem;
   text-align: center; 
 }
-
-
-
 
 /* Edition */
 #editionContainer {
@@ -91,25 +69,75 @@ video {
 
 .btnContainer {
   margin-top: 2rem;
-  color: #9C8853;
 }
 
 .btnContainer a{
   color: #9C8853;
+  margin: 1rem;
 }
 
 /* Footer */
 #footerContainer {
-  margin: 0 0 0 2rem;
+  margin-left: 2rem;
   margin-top: 50vh;
-  width: 27%;
+  width: 75%;
+  max-width: 375px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 #footerContainer p, #footerContainer a {
+  font-size: 1rem;
   color:#5A5A5A;
   font-weight: 400;
 }
 
+/* Media Queries */
+@media (max-width: 750px) {
+  #footerContainer {
+    margin-left: 0.5rem;
+    width: 70%;
+  }
+  #footerContainer p, #footerContainer a {
+    font-size: 0.75rem;
+  }
+  #title h1 {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+  video {
+    transform: scale(1.5);
+  }
+  .edition {
+    font-size: 1.5rem;
+  }
+  .btnContainer a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #title h1 {
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+  }
+  video {
+    transform: scale(2);
+  }
+  .edition {
+    font-size: 1rem;
+  }
+  #editionContainer {
+    margin-top: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  #footerContainer {
+    margin-left: 1rem;
+    width: 90%
+}
+} 
