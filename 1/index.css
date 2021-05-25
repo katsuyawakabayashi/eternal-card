@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral+SC:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral+SC:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap");
 
-html,body {
+html,
+body {
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
@@ -12,14 +13,16 @@ body {
   margin: 0;
   background-color: black;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
-h1,h2 {
+h1,
+h2 {
   margin: 0;
-  color: #5A5A5A;
+  color: #5a5a5a;
   letter-spacing: 0.5rem;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 h1 {
@@ -27,14 +30,13 @@ h1 {
 }
 
 a {
-  color: #FFF;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
 
-
 p {
-    margin: 0;
+  margin: 0;
 }
 
 a:hover {
@@ -44,6 +46,7 @@ a:hover {
 /* Card Video */
 .videoContainer {
   width: 100%;
+  overflow: hidden;
 }
 
 video {
@@ -51,53 +54,56 @@ video {
   height: 100vh;
 }
 
-#leftContainer {
-    position: absolute;
-    left: 60px;
-    bottom: 40px;
-    font-size: 1.5rem;
-}
 
-#rightContainer {
-    position: absolute;
-    right: 60px;
-    bottom: 40px;
-    font-size: 3rem;
-    font-family: "Scheherazade";
-    line-height: 1.5rem;
+/* Owner */
+#leftContainer {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
 }
 
 #ownedBy {
-    padding-bottom: 10px;
-    color: #fff;
-}
-
-#galleryContainer {
-    color: #555;
-}
-
-
-#galleryContainer:hover{
-    color: #FFF;
-    text-decoration: none;
-}
-
-#topContainer {
-    position: absolute;
-    left: 50px;
-    top: 40px;
-    font-size: 1.5rem;
+  padding-bottom: 10px;
+  color: #fff;
 }
 
 #ownerContainer {
-    font-size: 2.5rem;
-    color: #9C8853;
+  font-size: 2.5rem;
+  color: #9c8853;
+}
+
+/* Number */
+#rightContainer {
+  font-family: "Scheherazade";
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+/* Gallery */
+#topContainer {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+  font-size: 1.5rem;
+}
+
+#galleryContainer {
+  color: #555;
+}
+
+#galleryContainer:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Footer */
 #footerContainer {
-  margin-left: 2rem;
-  margin-top: 0;
+  margin-left: 3rem;
+  margin-bottom: 0;
   width: 75%;
   max-width: 375px;
   display: flex;
@@ -106,9 +112,10 @@ video {
   justify-content: space-between;
 }
 
-#footerContainer p, #footerContainer a {
+#footerContainer p,
+#footerContainer a {
   font-size: 1rem;
-  color:#5A5A5A;
+  color: #5a5a5a;
   font-weight: 400;
 }
 
@@ -117,11 +124,34 @@ video {
   video {
     transform: scale(1.5);
   }
+  #topContainer {
+    top: 2rem;
+    left: 2rem;
+    
+  }
+  #rightContainer {
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  #leftContainer {
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #ownedBy {
+    font-size: 1rem;
+  }
+  #ownerContainer {
+    font-size: 1.5rem;
+  }
   #footerContainer {
     margin-left: 0.5rem;
     width: 70%;
   }
-  #footerContainer p, #footerContainer a {
+  #footerContainer p,
+  #footerContainer a {
     font-size: 0.75rem;
   }
 }
@@ -130,35 +160,8 @@ video {
   video {
     transform: scale(2);
   }
-} 
-
-@media (max-width: 400px) {
   #footerContainer {
-      margin-left: 1rem;
-      width: 90%
-  }
-  #rightContainer{
-    /* top: 3rem;
-    right: 3rem; */
-    right: 46%;
-    bottom: 18%;
-    
-    font-size: 3rem;
-    
-  }
-  #leftContainer {
-    font-size: 1rem;
-    margin-top: 0 auto;
-    left: 25%;
-    text-align: center;
-  }
-  /* #leftContainer:before {
-      content:"#1";
-      font-size: 3rem;
-      padding-top: 50px;
-  } */
-  #ownerContainer {
-    font-size: 1.5rem;
-    
+    margin-left: 1rem;
+    width: 90%;
   }
 }
