@@ -1,21 +1,35 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import Layout from '../components/sites/Layout'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title></title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center"></main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        Footer
-      </footer>
-    </div>
+    <Layout>
+      <div className="flex min-h-screen flex-col items-center justify-center bg-black py-2">
+        <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+          <div className="flex h-screen items-center">
+            <video autoPlay={true} muted src="/hero.mp4" />
+          </div>
+          <div className="flex h-screen items-center justify-center ">
+            <div className="flex flex-col justify-center">
+              <div className="text-3xl tracking-widest">ETERNAL CARD</div>
+              <div className="flex justify-center gap-5 p-5 text-eternal-gold">
+                <Link href="/gallery">Gallery</Link>
+                <a
+                  href="https://opensea.io/collection/eternal-card"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Purchase
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </Layout>
   )
 }
 
