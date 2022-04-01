@@ -1,9 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Card from '../components/Card'
 import Layout from '../components/sites/Layout'
 
-const gallery = () => {
+const Gallery = () => {
   return (
     <Layout>
       <div className="flex h-screen flex-col items-center">
@@ -11,44 +11,7 @@ const gallery = () => {
           GALLERY
         </div>
         <div className="flex">
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
-        </div>
-        <div className="flex">
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
-          <div className="p-10 text-eternal-gold">
-            <div className="flex flex-col">
-              <Image src="/monalisa.png" height={300} width={300} />
-              <div className="text-center">#0</div>
-            </div>
-          </div>
+          <Card title="0" />
         </div>
 
         <span className="text-eternal-gray underline">
@@ -59,4 +22,4 @@ const gallery = () => {
   )
 }
 
-export default gallery
+export default Gallery
