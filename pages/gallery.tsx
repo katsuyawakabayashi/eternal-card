@@ -2,14 +2,18 @@ import Link from 'next/link'
 import React from 'react'
 import Footer from '../components/Footer'
 import GalleryCard from '../components/GalleryCard'
-import Layout from '../components/sites/Layout'
+import Layout, { Meta } from '../components/sites/Layout'
 
 const Gallery = () => {
+  const meta = {
+    description: 'ETERNAL CARD Gallery',
+    title: 'Gallery',
+  } as Meta
   return (
-    <Layout>
+    <Layout meta={meta}>
       <div className="flex h-screen flex-col items-center">
         <div className="m-10 text-4xl tracking-widest text-eternal-gray">
-          GALLERY
+          Gallery
         </div>
         <div className="grid grid-cols-3">
           <GalleryCard title="12" />

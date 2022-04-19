@@ -1,11 +1,15 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Footer from '../components/Footer'
-import Layout from '../components/sites/Layout'
+import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
+  const meta = {
+    description: 'ETERNAL ASSETS',
+    title: 'ETERNALCARD',
+  } as Meta
   return (
-    <Layout>
+    <Layout meta={meta}>
       <div className="flex min-h-screen flex-col items-center justify-center bg-black py-2">
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
           <div className="flex h-screen items-center">
