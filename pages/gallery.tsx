@@ -7,7 +7,7 @@ import Layout from '../components/sites/Layout'
 const Gallery = () => {
   return (
     <Layout>
-      <div className="flex h-full flex-col items-center">
+      <div className="flex h-screen flex-col items-center">
         <div className="m-10 text-4xl tracking-widest text-eternal-gray">
           GALLERY
         </div>
