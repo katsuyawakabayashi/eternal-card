@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Footer from '../components/Footer'
 import GalleryCard from '../components/GalleryCard'
 import Layout from '../components/sites/Layout'
 
@@ -18,6 +19,7 @@ const Gallery = () => {
           <Link href="/">Go back to main page</Link>
         </span>
       </div>
+      <Footer />
     </Layout>
   )
 }
