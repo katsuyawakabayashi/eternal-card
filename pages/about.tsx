@@ -15,7 +15,7 @@ const About = () => {
           <p>Our mission is to standardize the world’s digital assets.</p>
           <p>In blockchain, we trust.</p>
         </div>
-        <span className="text-eternal-gray underline">
+        <span className="text-eternal-gray underline hover:text-white">
           <Link href="/">Go back to main page</Link>
         </span>
         <Footer />

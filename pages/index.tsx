@@ -18,15 +18,19 @@ const Home: NextPage = () => {
           <div className="flex h-screen items-center justify-center ">
             <div className="flex flex-col justify-center">
               <div className="text-3xl tracking-widest">ETERNAL CARD</div>
-              <div className="flex justify-center gap-5 p-5 text-eternal-gold">
-                <Link href="/gallery">Gallery</Link>
-                <a
-                  href="https://opensea.io/collection/eternalcard"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Purchase
-                </a>
+              <div className="flex justify-center gap-5 p-5 text-eternal-gold ">
+                <span className="hover:opacity-80">
+                  <Link href="/gallery">Gallery</Link>
+                </span>
+                <span className="hover:opacity-80">
+                  <a
+                    href="https://opensea.io/collection/eternalcard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Purchase
+                  </a>
+                </span>
               </div>
             </div>
           </div>

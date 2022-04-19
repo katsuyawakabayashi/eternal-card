@@ -19,7 +19,7 @@ export default function DynamicPage({ title, owner }: NFTProps): JSX.Element {
         <div className="flex scale-150  sm:scale-100">
           <NFT title={title} />
         </div>
-        <div className="absolute top-5 left-5 text-2xl text-eternal-gray ">
+        <div className="absolute top-5 left-5 text-2xl text-eternal-gray hover:text-white">
           <Link href="/gallery">
             <a>Gallery</a>
           </Link>

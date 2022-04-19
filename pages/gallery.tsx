@@ -19,7 +19,7 @@ const Gallery = () => {
           <GalleryCard title="12" />
         </div>
 
-        <span className="text-eternal-gray underline">
+        <span className="text-eternal-gray underline hover:text-white">
           <Link href="/">Go back to main page</Link>
         </span>
       </div>
