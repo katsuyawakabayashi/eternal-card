@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
+import Footer from '../components/Footer'
 import Layout from '../components/sites/Layout'
 
-const about = () => {
+const About = () => {
   return (
     <Layout>
       <div className="flex h-screen flex-col items-center">
@@ -10,16 +11,17 @@ const about = () => {
           About
         </div>
         <div className="p-10 text-center leading-10">
-          <p>Eternal card is a non-depreciable, blockchain powered asset.</p>
+          <p>ETERNAL CARD is a non-depreciable, blockchain powered asset.</p>
           <p>Our mission is to standardize the world’s digital assets.</p>
           <p>In blockchain, we trust.</p>
         </div>
         <span className="text-eternal-gray underline">
           <Link href="/">Go back to main page</Link>
         </span>
+        <Footer />
       </div>
     </Layout>
   )
 }
 
-export default about
+export default About
