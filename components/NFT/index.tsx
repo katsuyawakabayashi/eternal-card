@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface NFTProps {
-  title: string
+  title: number
 }
 
 const NFT = ({ title }: NFTProps) => {
