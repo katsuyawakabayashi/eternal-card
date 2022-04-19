@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../components/Footer'
 import Layout from '../components/sites/Layout'
@@ -19,7 +17,7 @@ const Home: NextPage = () => {
               <div className="flex justify-center gap-5 p-5 text-eternal-gold">
                 <Link href="/gallery">Gallery</Link>
                 <a
-                  href="https://opensea.io/collection/eternal-card"
+                  href="https://opensea.io/collection/eternalcard"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
