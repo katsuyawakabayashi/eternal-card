@@ -1,10 +1,10 @@
 import React from 'react'
 
 interface NFTProps {
-  title: number
+  title: string
 }
 
-const NFT = ({ title }: NFTProps) => {
+const NFTComponent = ({ title }: NFTProps) => {
   return (
     <video loop autoPlay={true} muted>
       <source src={`/${title}.mp4`} />
@@ -12,4 +12,4 @@ const NFT = ({ title }: NFTProps) => {
   )
 }
 
-export default NFT
+export default NFTComponent
