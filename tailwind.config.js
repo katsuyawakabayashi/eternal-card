@@ -9,6 +9,9 @@ module.exports = {
         'eternal-gold': '#9C8853',
         'eternal-gray': '#5A5A5A',
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],
