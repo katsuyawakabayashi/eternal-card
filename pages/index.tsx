@@ -1,21 +1,21 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { connected } from 'process'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
   const [connectedWallets, setConnectedWallets] = useState<string>()
+  const [authenticated, setAuthenticated] = useState<boolean>()
+  const [topButton, setTopButton] = useState<boolean>(false)
   const meta = {
     description: 'ETERNAL ASSETS',
     title: 'ETERNALCARD',
   } as Meta
 
-  const requestAccount = async () => {
+  const walletConnectHandler = async () => {
     if (typeof window !== 'undefined') {
       if (window.ethereum) {
-        console.log('Detected')
         try {
           const accounts = await window.ethereum.request({
             method: 'eth_requestAccounts',
@@ -23,39 +23,88 @@ const Home: NextPage = () => {
           setConnectedWallets(accounts)
         } catch (error) {
           console.log('Error')
-          console.log(error)
         }
+        setAuthenticated(true)
       } else {
-        console.log('Not detected')
+        console.log('Wallet not detected')
       }
     }
   }
-  useEffect(() => {
-    requestAccount()
-    if (connectedWallets) {
-      console.log(connectedWallets)
+  const checkAuthentication = async () => {}
+  if (typeof window !== 'undefined') {
+    if (window.ethereum) {
+      if (authenticated) {
+        try {
+          walletConnectHandler()
+        } catch (error) {
+          console.log('Error')
+        }
+      } else {
+        console.log('havnet authenticated')
+      }
     } else {
-      console.log('Not connected')
-      console.log(connectedWallets)
+      console.log('Wallet not detected')
+    }
+  }
+
+  useEffect(() => {
+    checkAuthentication()
+    if (document.body.scrollTop > 50) {
+      setTopButton(true)
+      console.log('top true')
+    } else {
+      console.log('top false')
+      setTopButton(true)
     }
   }, [])
 
   return (
     <Layout meta={meta}>
-      <div className="">
-        <button onClick={requestAccount}>Connect Wallet:</button>
-        <span>{connectedWallets}</span>
-      </div>
+      <div className="relative">
+        <div className="flex w-screen">
+          {topButton ? (
+            <div className="fixed right-4 top-5">
+              {connectedWallets ? (
+                <span>
+                  Connected Wallet: <span>{connectedWallets}</span>
+                </span>
+              ) : (
+                <button
+                  onClick={walletConnectHandler}
+                  className="rounded-2xl bg-eternal-gray/40 p-2"
+                >
+                  Connect Wallet
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="fixed right-4 bottom-5">
+              {connectedWallets ? (
+                <span>
+                  Connected Wallet: <span>{connectedWallets}</span>
+                </span>
+              ) : (
+                <button
+                  onClick={walletConnectHandler}
+                  className="rounded-2xl bg-eternal-gray/40 p-2"
+                >
+                  Connect Wallet
+                </button>
+              )}
+            </div>
+          )}
+        </div>
 
-      <div className="flex min-h-screen flex-col items-center justify-center bg-black py-2">
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-          <div className="flex h-screen items-center">
-            <video autoPlay={true} muted src="/hero.mp4" />
+          <div className="flex h-screen w-screen max-w-7xl items-center">
+            <video autoPlay={true} loop muted src="/hero.mp4" />
           </div>
           <div className="flex h-screen items-center justify-center ">
             <div className="flex flex-col justify-center">
-              <div className="text-3xl tracking-widest">ETERNAL CARD</div>
-              <div className="flex justify-center gap-5 p-5 text-eternal-gold ">
+              <div className="text-2xl tracking-widest sm:text-3xl">
+                ETERNAL CARD
+              </div>
+              <div className="flex justify-center gap-5 p-5 text-eternal-gold">
                 <span className="hover:opacity-80">
                   <Link href="/gallery">Gallery</Link>
                 </span>
