@@ -6,11 +6,25 @@ import Footer from '../components/Footer'
 import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
-  const [connectedWallets, setConnectedWallets] = useState<string>('')
+  const [connectedWallets, setConnectedWallets] = useState<string>('1')
   const meta = {
     description: 'ETERNAL ASSETS',
     title: 'ETERNALCARD',
   } as Meta
+
+  useEffect(() => {
+    let data = window.localStorage.getItem('connectedWallets')
+    if (data !== null) {
+      setConnectedWallets(JSON.parse(data))
+    }
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem(
+      'connectedWallets',
+      JSON.stringify(connectedWallets)
+    )
+  }, [connectedWallets])
 
   const requestAccount = async () => {
     if (window.ethereum) {
@@ -42,10 +56,7 @@ const Home: NextPage = () => {
         <div className="flex w-screen">
           <div className="fixed right-4 top-5">
             {connectedWallets ? (
-              <button
-                onClick={requestAccount}
-                className="group relative w-40 rounded-2xl bg-eternal-gray/40 p-2"
-              >
+              <button className="group relative w-40 rounded-2xl bg-eternal-gray/40 p-2">
                 <span className="z-10 h-20 text-white group-hover:opacity-0">
                   Connected
                 </span>
