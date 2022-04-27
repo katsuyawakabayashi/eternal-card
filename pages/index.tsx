@@ -1,3 +1,4 @@
+import { ethers } from 'ethers'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -5,94 +6,62 @@ import Footer from '../components/Footer'
 import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
-  const [connectedWallets, setConnectedWallets] = useState<string>()
-  const [authenticated, setAuthenticated] = useState<boolean>()
-  const [topButton, setTopButton] = useState<boolean>(false)
+  const [connectedWallets, setConnectedWallets] = useState<string>('')
   const meta = {
     description: 'ETERNAL ASSETS',
     title: 'ETERNALCARD',
   } as Meta
 
-  const walletConnectHandler = async () => {
-    if (typeof window !== 'undefined') {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({
-            method: 'eth_requestAccounts',
-          })
-          setConnectedWallets(accounts)
-        } catch (error) {
-          console.log('Error')
-        }
-        setAuthenticated(true)
-      } else {
-        console.log('Wallet not detected')
-      }
-    }
-  }
-  const checkAuthentication = async () => {}
-  if (typeof window !== 'undefined') {
+  const requestAccount = async () => {
     if (window.ethereum) {
-      if (authenticated) {
-        try {
-          walletConnectHandler()
-        } catch (error) {
-          console.log('Error')
+      try {
+        const accounts = await window.ethereum.request({
+          method: 'eth_requestAccounts',
+        })
+        setConnectedWallets(accounts[0])
+      } catch (error) {
+        if (error === 4001) {
+          alert('Error connecting')
+        } else {
+          alert(error)
         }
-      } else {
-        console.log('havnet authenticated')
       }
-    } else {
-      console.log('Wallet not detected')
     }
   }
 
-  useEffect(() => {
-    checkAuthentication()
-    if (document.body.scrollTop > 50) {
-      setTopButton(true)
-      console.log('top true')
-    } else {
-      console.log('top false')
-      setTopButton(true)
+  const connectWallet = async () => {
+    if (typeof window !== 'undefined') {
+      await requestAccount()
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
     }
-  }, [])
+  }
 
   return (
     <Layout meta={meta}>
       <div className="relative">
         <div className="flex w-screen">
-          {topButton ? (
-            <div className="fixed right-4 top-5">
-              {connectedWallets ? (
-                <span>
-                  Connected Wallet: <span>{connectedWallets}</span>
+          <div className="fixed right-4 top-5">
+            {connectedWallets ? (
+              <button
+                onClick={requestAccount}
+                className="group relative w-40 rounded-2xl bg-eternal-gray/40 p-2"
+              >
+                <span className="z-10 h-20 text-white group-hover:opacity-0">
+                  Connected
                 </span>
-              ) : (
-                <button
-                  onClick={walletConnectHandler}
-                  className="rounded-2xl bg-eternal-gray/40 p-2"
-                >
-                  Connect Wallet
-                </button>
-              )}
-            </div>
-          ) : (
-            <div className="fixed right-4 bottom-5">
-              {connectedWallets ? (
-                <span>
-                  Connected Wallet: <span>{connectedWallets}</span>
+                <span className="absolute inset-0 z-50 mx-5 flex items-center   text-white opacity-0 duration-500 group-hover:opacity-100">
+                  <span className="truncate">{connectedWallets}</span>
                 </span>
-              ) : (
-                <button
-                  onClick={walletConnectHandler}
-                  className="rounded-2xl bg-eternal-gray/40 p-2"
-                >
-                  Connect Wallet
-                </button>
-              )}
-            </div>
-          )}
+              </button>
+            ) : (
+              <button
+                onClick={requestAccount}
+                className="w-40 truncate rounded-2xl bg-eternal-gray/40 p-2"
+              >
+                Connect Wallet
+              </button>
+            )}
+          </div>
         </div>
 
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
