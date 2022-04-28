@@ -16,7 +16,12 @@ const Gallery = () => {
           Gallery
         </div>
         <div className="grid grid-cols-3">
-          <GalleryCard title="12" />
+          <GalleryCard title="0" />
+          <GalleryCard title="1" />
+          <GalleryCard title="2" />
+          <GalleryCard title="3" />
+          <GalleryCard title="4" />
+          <GalleryCard title="5" />
         </div>
 
         <span className="text-eternal-gray underline hover:text-white">
