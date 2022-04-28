@@ -14,11 +14,13 @@ const Home: NextPage = () => {
   } as Meta
 
   useEffect(() => {
-    let data = window.localStorage.getItem('connectedWallets')
-    if (data !== null) {
-      // setConnectedWallets(JSON.parse(data))
+    const fetchData = async () => {
+      let data = await window.localStorage.getItem('connectedWallets')
+      if (data !== null) {
+        setConnectedWallets(JSON.parse(data))
+      }
     }
-    console.log('connectedWallets', connectedWallets)
+    fetchData()
   }, [])
 
   useEffect(() => {
