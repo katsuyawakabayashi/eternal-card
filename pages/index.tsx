@@ -1,12 +1,9 @@
-import { ethers } from 'ethers'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
-  const [connectedWallets, setConnectedWallets] = useState<string>()
   const meta = {
     description: 'ETERNAL ASSETS',
     title: 'ETERNALCARD',
