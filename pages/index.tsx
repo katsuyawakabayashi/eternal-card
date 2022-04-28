@@ -6,7 +6,8 @@ import Footer from '../components/Footer'
 import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
-  const [connectedWallets, setConnectedWallets] = useState<string>('1')
+  const [connectedWallets, setConnectedWallets] = useState<string>()
+  const [authenticated, setAuthenticated] = useState<boolean>(false)
   const meta = {
     description: 'ETERNAL ASSETS',
     title: 'ETERNALCARD',
@@ -15,8 +16,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     let data = window.localStorage.getItem('connectedWallets')
     if (data !== null) {
-      setConnectedWallets(JSON.parse(data))
+      // setConnectedWallets(JSON.parse(data))
     }
+    console.log('connectedWallets', connectedWallets)
   }, [])
 
   useEffect(() => {
