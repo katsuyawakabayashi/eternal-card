@@ -12,10 +12,10 @@ const Gallery = () => {
   return (
     <Layout meta={meta}>
       <div className="flex h-screen flex-col items-center">
-        <div className="m-10 text-4xl tracking-widest text-eternal-gray">
+        <div className="my-10 text-4xl tracking-widest text-eternal-gray ">
           Gallery
         </div>
-        <div className="grid grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
           <GalleryCard title="0" />
           <GalleryCard title="1" />
           <GalleryCard title="2" />
@@ -24,7 +24,7 @@ const Gallery = () => {
           <GalleryCard title="5" />
         </div>
 
-        <span className="text-eternal-gray underline hover:text-white">
+        <span className="mt-24 text-eternal-gray underline hover:text-white">
           <Link href="/">Go back to main page</Link>
         </span>
       </div>
