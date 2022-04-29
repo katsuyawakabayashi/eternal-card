@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 import Footer from '../components/Footer'
-import Layout from '../components/sites/Layout'
+import Layout, { Meta } from '../components/sites/Layout'
 
 const Notation = () => {
+  const meta = {
+    description: 'ETERNAL CARD Notation',
+    title: 'Notation',
+  } as Meta
   return (
-    <Layout>
+    <Layout meta={meta}>
       <div className="flex h-screen flex-col items-center">
         <div className="m-10 text-4xl tracking-widest text-eternal-gray">
           Notation

@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 import Footer from '../components/Footer'
-import Layout from '../components/sites/Layout'
+import Layout, { Meta } from '../components/sites/Layout'
 
 const About = () => {
+  const meta = {
+    description: 'About ETERNAL CARD',
+    title: 'About',
+  } as Meta
   return (
     <Layout>
       <div className="flex h-screen flex-col items-center">
