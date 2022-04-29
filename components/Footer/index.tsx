@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 flex h-16 w-full items-center justify-around bg-black ">
+    <footer className="flex h-16 w-full items-center justify-around bg-black ">
       <span className="text-eternal-gray hover:text-white">
         &copy; {new Date().getFullYear()} <Link href="/">ETERNAL CARD</Link>
       </span>

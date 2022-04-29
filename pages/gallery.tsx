@@ -15,7 +15,7 @@ const Gallery = () => {
         <div className="my-10 text-4xl tracking-widest text-eternal-gray ">
           Gallery
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-14 sm:grid-cols-2 md:grid-cols-3">
           <GalleryCard title="0" />
           <GalleryCard title="1" />
           <GalleryCard title="2" />
@@ -24,11 +24,11 @@ const Gallery = () => {
           <GalleryCard title="5" />
         </div>
 
-        <span className="mt-24 text-eternal-gray underline hover:text-white">
+        <span className="my-24 text-eternal-gray underline hover:text-white">
           <Link href="/">Go back to main page</Link>
         </span>
+        <Footer />
       </div>
-      <Footer />
     </Layout>
   )
 }
