@@ -5,8 +5,8 @@ import Layout, { Meta } from '../components/sites/Layout'
 
 const Home: NextPage = () => {
   const meta = {
-    description: 'ETERNAL ASSETS',
-    title: 'ETERNALCARD',
+    description: 'Art. Revived in Blockchain.',
+    title: 'ETERNAL CARD',
   } as Meta
 
   return (
