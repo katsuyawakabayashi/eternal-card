@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <div className="relative">
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
           <div className="flex h-screen w-screen max-w-7xl items-center">
-            <video autoPlay={true} loop muted src="/hero.mp4" />
+            <video autoPlay={true} loop muted src="/0.mp4" />
           </div>
           <div className="flex h-screen items-center justify-center ">
             <div className="flex flex-col justify-center">
