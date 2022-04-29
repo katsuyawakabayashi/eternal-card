@@ -23,7 +23,7 @@ const Layout = ({ meta, children }: LayoutProps) => {
         <link rel="shortcut icon" type="image/x-icon" href={meta?.logo} />
         <link rel="apple-touch-icon" sizes="180x180" href={meta?.logo} />
       </Head>
-      <div className="relative bg-black text-white">{children}</div>
+      <div className="bg-black text-white">{children}</div>
     </div>
   )
 }

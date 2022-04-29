@@ -26,8 +26,8 @@ const Notation = () => {
         <span className="mt-24 text-eternal-gray underline hover:text-white">
           <Link href="/">Go back to main page</Link>
         </span>
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   )
 }
