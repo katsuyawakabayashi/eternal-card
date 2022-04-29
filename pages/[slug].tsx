@@ -6,21 +6,22 @@ import { useRouter } from 'next/router'
 interface NFTProps {
   title: string
   owner: string
-  link?: string
 }
 
 interface NFTListProps extends Array<NFTProps> {}
 
-const unknownNFT: NFTProps = {
-  title: '???',
-  owner: 'Unknown',
-  link: 'https://eternal-card.com',
-}
-
 const NFTList: NFTListProps = [
-  { title: '12', owner: '', link: 'https://example.com' },
+  { title: '0', owner: '' },
   { title: '1', owner: '' },
   { title: '2', owner: '' },
+  { title: '3', owner: '' },
+  { title: '4', owner: '' },
+  { title: '5', owner: '' },
+  { title: '6', owner: '' },
+  { title: '7', owner: '' },
+  { title: '8', owner: '' },
+  { title: '9', owner: '' },
+  { title: '10', owner: '' },
 ]
 
 const getNFTIndex = () => {
@@ -67,12 +68,14 @@ export default function DynamicPage({ NFTs }: any): JSX.Element {
         <div className="absolute bottom-5 text-center sm:left-5">
           <div className="text-lg sm:text-left sm:text-2xl">Owned by</div>
           <div className="text-2xl text-eternal-gold sm:text-5xl">
-            {NFT!.link ? (
-              <Link href={`${NFT!.link}`}>
+            {NFT!.owner ? (
+              <Link href={`https://twitter.com/${NFT!.owner}`}>
                 <a>@{NFT!.owner}</a>
               </Link>
             ) : (
-              <span>@{NFT!.owner}</span>
+              <Link href={`https://twitter.com/eternalcard`}>
+                <a>@ETERNALCARD</a>
+              </Link>
             )}
           </div>
         </div>
