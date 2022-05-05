@@ -12,7 +12,7 @@ export default function DynamicPage(): JSX.Element {
     <Layout meta={meta}>
       <div className="relative flex h-screen items-center justify-center overflow-hidden">
         <div className="flex scale-150  sm:scale-100">
-          <NFTComponent title={'???'} />
+          <NFTComponent title={'404'} />
         </div>
         <div className="absolute top-5 left-5 text-2xl text-eternal-gray hover:text-white">
           <Link href="/gallery">
